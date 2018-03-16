@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="css/m_login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="content">
+        <div class="logo">
+            <img src="../img/logo_j.png" />
+        </div>
+        <div class="login">
+            <div style="border-radius: 3px; background: #fff;">
+                <div class="dt" style="border-bottom: 1px solid #eaeaea">
+                    <span class="ico-c"></span>
+                    <input type="text" class="txt" id="txtLogin" autocomplete="off" placeholder="输入邮箱帐号/手机号进行登录" />
+                </div>
+                <div class="dt">
+                    <span class="ico-c"></span>
+                    <input type="password" class="txt" id="txtPwd" autocomplete="off" placeholder="输入您的邮箱密码" />
+                </div>
+            </div>
+            <div class="chkState">
+                <input type="checkbox" class="chk" id="chkState" /><label for="chkState" class="lblState">记住登录状态</label>
+            </div>
+            <div class="btnL">登  录</div>
+            <div class="register">
+                <a class="ac" id="aFindPwd" style="float: left;">忘记密码</a>
+                <a class="ac" id="aRegister" style="float: right;">免费注册</a>
+            </div>
+        </div>
+        <div class="msg">请输入帐号</div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="js/m_login.js"></script>
+</body>
+</html>

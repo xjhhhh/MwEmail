@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            min-width: 864px;
+            background: #fff;
+        }
+
+        .main {
+            padding: 5px;
+        }
+
+        .cont {
+            width: 100%;
+            min-height: 572px;
+            background-color: darkgrey;
+            font-size: 12px;
+        }
+
+        .tHeader {
+            border-top: 1px solid #fff;
+            color: #3b3b3b;
+            box-sizing: border-box;
+            table-layout: fixed;
+            width: 100%;
+            height: auto;
+        }
+
+            .tHeader tr {
+                height: 24px;
+                line-height: 24px;
+            }
+
+            .tHeader td {
+                border-bottom: 1px solid #c1c8d2;
+                /*border-right:1px solid #c1c8d2;*/
+                background-color: #f2f4f6;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+
+        .tr {
+            height: 25px;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            background-color: #fff;
+        }
+
+            .tr:hover {
+                background: #F5F5F5;
+            }
+
+            .tr td {
+                border-bottom: 1px solid #D5D6D7;
+            }
+
+        .tId {
+            width: 100px;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .tSend {
+            width: 200px;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .tTitle {
+            width: auto;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .tTime {
+            width: 200px;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="cont">
+            <div class="main">
+                <div>
+                    <table cellspacing="0" cellpadding="0" class="tHeader">
+                        <tr id="s">
+                            <td class="tId" style="border-right: 1px solid #c6c6c6;">编号</td>
+                            <td class="tSend" style="border-right: 1px solid #c6c6c6;">发件人</td>
+                            <td class="tSend" style="border-right: 1px solid #c6c6c6;">收件人</td>
+                            <td class="tTitle" style="border-right: 1px solid #c6c6c6;">主题</td>
+                            <td class="tTime">时间</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table id="t_mail" cellspacing="0" cellpadding="0" style="table-layout: fixed; width: 100%; height: auto;">
+                        <!--此处自动加载-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        function loadData() {
+            $.getJSON("../email.ashx", { Id: 4,Index:1 }, function (data) {
+                var html = "";
+                $.each(data, function (i, obj) {
+                    html += "<tr class='tr' data-id='" + obj.E_Id + "'>" +
+                            "<td class='tId'>" + obj.E_Id + "</td>" +
+                            "<td class='tSend'>" + obj.E_SendMan + "</td>" +
+                            "<td class='tSend'>" + obj.E_ReceiveMan + "</td>" +
+                            "<td class='tTitle'>" + obj.E_Title + "</td>" +
+                            "<td class='tTime'>" + TestIt(obj.E_Time) + "</td>" +
+                            "</tr>";
+                });
+                $("#t_mail").html(html);
+            })
+        }
+        loadData();
+
+        //格式化日期参数
+        function formatDate(dt) {
+            var year = dt.getFullYear();
+            var month = dt.getMonth() + 1;
+            var date = dt.getDate();
+            var hour = dt.getHours();
+            var minute = dt.getMinutes();
+            var second = dt.getSeconds();
+            if (month < 10)
+                month = "0" + month;
+            if (date < 10)
+                date = "0" + date;
+            if (hour < 10)
+                hour = "0" + hour;
+            if (second < 10)
+                second = "0" + second;
+            if (minute < 10)
+                minute = "0" + minute;
+            return year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+        }
+        function TestIt(Dtime) {
+            var NewDtime = new Date(parseInt(Dtime.slice(6, 19)));
+            return formatDate(NewDtime);
+        }
+    </script>
+</body>
+</html>

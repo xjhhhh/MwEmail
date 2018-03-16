@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-width: 1024px;
+            width: 100%;
+            height: 582px;
+            background: #F3F8FC;
+        }
+
+        .left {
+            padding-top: 5px;
+            width: 160px;
+            float: left;
+            height: 582px;
+            background-color: #D5D4D9;
+            box-sizing: border-box;
+        }
+
+        .right {
+            margin-left: 160px;
+            height: 582px;
+            background-color: cadetblue;
+        }
+
+        .title {
+            width: auto;
+            height: 25px;
+            margin-right: 5px;
+            background: linear-gradient(#FBFBFB,#DBDCE0);
+            border-radius: 3px;
+            border-bottom: 1px solid #B8B8C0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 25px;
+        }
+
+        .l_list {
+            margin: 5px;
+            background-color: #E2E1E4;
+            border: 1px solid #C6C6CD;
+            border-radius: 5px;
+            padding: 5px 20px;
+        }
+
+        .u_list {
+            list-style: none;
+            font-size: 12px;
+        }
+
+        .li {
+            height: 25px;
+            line-height: 25px;
+        }
+
+        .al:hover {
+            color: red;
+            cursor: pointer;
+        }
+
+        #frame {
+            width: 100%;
+            height: 582px;
+            border: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="mian">
+        <div class="left">
+            <div class="title">
+                <a id="aTitle">邮件管理</a>
+            </div>
+            <div class="l_list">
+                <ul class="u_list">
+                    <li class="li"><a class="al">所有邮件</a></li>
+                    <li class="li"><a class="al">所有邮件</a></li>
+                    <li class="li"><a class="al">所有邮件</a></li>
+                    <li class="li"><a class="al">所有邮件</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <iframe id="frame" src="b_mail.main"></iframe>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+
+        function loadData() {
+            var data = [];
+            var href = window.location.href.toString();
+            //alert(href);
+            var id = href.split('id=')[1];
+            switch (id) {
+                case "1":
+                    $("#aTitle").text("邮件管理");
+                    data = ["所有邮件", "操作记录"];
+                    break;
+                case "2":
+                    $("#aTitle").text("用户管理");
+                    data = ["用户列表", "操作记录"];
+                    break;
+                case "3":
+                    $("#aTitle").text("投诉信息");
+                    data = ["投诉邮件", "处理结果", "操作记录"];
+                    break;
+                case "4":
+                    $("#aTitle").text("系统管理");
+                    data = ["修改密码", "操作记录"];
+                    break;
+            }
+            var html = "";
+            for (var i = 0; i < data.length; i++)
+                html += "<li class='li'><a class='al' id='" + i + "'>" + data[i] + "</a></li>";
+            $(".u_list").html(html);
+            $(".al").click(function () {
+                var ids = id.toString() + $(this).attr("id");
+                switch (ids) {
+                    case "10":
+                        $("#frame").attr("src", "b_mail.html");
+                        break;
+                    case "11":
+                        $("#frame").attr("src", "b_operation.html?id=1");
+                        break;
+                    case "20":
+                        $("#frame").attr("src", "b_user.html");
+                        break;
+                    case "21":
+                        $("#frame").attr("src", "b_operation.html?id=2");
+                        break;
+                    case "30":
+                        $("#frame").attr("src", "b_tousu.html");
+                        break;
+                    case "31":
+                        $("#frame").attr("src", "b_result.html");
+                        break;
+                    case "32":
+                        $("#frame").attr("src", "b_operation.html?id=3");
+                        break;
+                    case "40":
+                        $("#frame").attr("src", "b_updatePwd.html");
+                        break;
+                    case "41":
+                        $("#frame").attr("src", "b_operation.html?id=4");
+                        break;
+                }
+            });
+            $("#0").click();
+        }
+        loadData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="css/f_friend.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="main">
+        <div class="showMsg" id="divShow">
+            <span class="msg">删除成功</span>
+        </div>
+        <div class="h_btns">
+            <a class="btns" id="btnAddFriend" style="margin-left: 0px;">新建联系人</a>
+            <a class="btns" id="btnWrite">写信</a>
+            <a class="btns" id="btnRemoveGroup">移动到组<div class="aGroup" id="group">
+                <ul class="su"></ul>
+            </div>
+            </a>
+            <a class="btns" id="btnDelete">删除</a>
+        </div>
+        <div style="height: 400px;">
+            <div>
+                <table cellspacing="0" cellpadding="0" class="tHeader">
+                    <tr>
+                        <td class="tChk" style="border-right: 1px solid #c6c6c6;">
+                            <input type="checkbox" id="chkAll" class="chks" />
+                            <label for="chkAll" style="line-height: 19px; vertical-align: middle; user-select: none; cursor: pointer;">全选</label>
+                        </td>
+                        <td class="tName" style="border-right: 1px solid #c6c6c6;">姓名</td>
+                        <td class="tMail" style="border-right: 1px solid #c6c6c6;">邮件地址</td>
+                        <td class="tPhone" style="border-right: 1px solid #c6c6c6;">手机号码</td>
+                        <td class="tGroup">所在分组</td>
+                    </tr>
+                </table>
+
+            </div>
+            <div>
+                <table id="t_friend" cellspacing="0" cellpadding="0" style="table-layout: fixed; width: 100%; height: auto;">
+                    <!--此处自动加载-->
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/f_friend.js"></script>
+</body>
+</html>

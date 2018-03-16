@@ -1,0 +1,149 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    min-width: 1024px;
+}
+
+.content {
+    height: 662px;
+}
+
+.head {
+    width: 100%;
+    height: 72px;
+    background: url('../img/tbg2.jpg');
+    background-size: cover;
+}
+
+.h_logo {
+    float: left;
+    width: 250px;
+    height: 72px;
+    text-align: right;
+}
+
+.h_ul {
+    margin-left: 50px;
+    margin-top: 21px;
+    float: left;
+    width: 600px;
+    height: 30px;
+    float: left;
+}
+
+.h_login {
+    width: auto;
+    height: 72px;
+    float: right;
+    /*max-width: 184px;*/
+}
+
+.u_navigation {
+    width: 100%;
+    list-style: none;
+    float: left;
+    display: flex;
+}
+
+.ls {
+    flex: 1;
+    width: 20%;
+    text-align: center;
+    line-height: 30px;
+    user-select: none;
+    cursor: pointer;
+    background: #E4EFF7;
+    border: 1px solid #f8fafc;
+    box-sizing: border-box;
+}
+
+.u_navigation li:hover[class=ls] {
+    background: #f8fafc;
+}
+
+#frame {
+    width: 100%;
+    height: 590px;
+    border: 0;
+    display: block;
+}
+
+.liClick {
+    background: #16669E;
+    border-color: #16689E;
+}
+
+.aLogin {
+    color: #0080c0 !important;
+    cursor: pointer;
+    margin-right: 200px;
+    line-height: 72px;
+    position: relative;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.set {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    border: 1px solid #bbb;
+    background: #fff;
+    display: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    padding: 7px 0;
+    cursor: default;
+}
+
+.sl {
+    line-height: 25px;
+    list-style: none;
+    /*border-bottom: 1px solid black;*/
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    color: #555;
+}
+
+    .sl:hover {
+        background: #CDE3F3;
+    }
+
+@media screen and (min-width:1025px) {
+    .h_logo {
+        /*width: 250px;*/
+    }
+
+    .h_ul {
+        /*margin-left: 30px;*/
+    }
+
+    .aLogin {
+        /*margin-right: 20%;*/
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .h_logo {
+        width: 220px;
+    }
+
+    .h_ul {
+        margin-left: 20px;
+    }
+
+    .aLogin {
+        margin-right: 70px;
+        max-width: 184px;
+    }
+}

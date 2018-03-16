@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="css/f_finSend.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="dm">
+        <div class="content">
+            <div class="up">
+                <div class="suc">
+                    <h1 class="h1"><b class="ico"></b>发送成功</h1>
+                </div>
+                <div class="dal">
+                    <a class="al" id="aReturn">返回收件箱</a>
+                    <a class="al" id="aRwrite">再写一封</a>
+                </div>
+            </div>
+            <div class="down">
+                <div class="dgg">
+                    <div class="gg">
+                        <a href="http://www.gcpowertools.com.cn/products/activereports_overview.htm?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=AR&amp;utm_campaign=community" target="_blank">
+                            <img width="300" height="250" src="img/gg1.png" alt="AR_1206" />
+                        </a>
+                    </div>
+                    <div class="gg">
+                        <a href="http://www.gcpowertools.com.cn/products/spreadjs/?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=SpreadJS1&amp;utm_campaign=community" target="_blank">
+                            <img width="300" height="250" src="img/gg2.png" alt="SpreadJS_1206"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $("#aReturn").click(function () {
+            $(location).attr("href", "f_mail.html?id=a");
+        });
+        $("#aRwrite").click(function () {
+            $(location).attr("href", "f_write.html");
+        })
+    </script>
+</body>
+</html>

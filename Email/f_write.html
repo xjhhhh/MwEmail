@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link href="css/f_write.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="content">
+        <div class="showMsg" id="divShow">
+            <span class="msg"></span>
+        </div>
+        <div style="width: 100%; height: 140px; background: #C3D3E2; padding-top: 10px;">
+            <div class="dm">
+                <div class="dbs">
+                    <a class="abs" id="btnSend">发送</a>
+                    <a class="abs" id="btnLook">预览</a>
+                    <a class="abs" id="btnSave">存草稿</a>
+                    <a class="abs" id="btnDelete" style="display:none;">删除草稿</a>
+                    <a class="abs" id="btnReturn">返回</a>
+                </div>
+                <div class="dtxt">
+                    <div class="dds">
+                        <div class="dlbls">
+                            <label class="lbl" style="cursor: pointer; color: blueviolet;">收件人</label>
+                        </div>
+                        <div class="dtxts">
+                            <input class="txts" type="text" id="txtRece" title="发给多人时地址请用分号隔开" />
+                        </div>
+                    </div>
+                    <div class="dds">
+                        <div class="dlbls">
+                            <label class="lbl" title="主题是一封邮件的标题">主题</label>
+                        </div>
+                        <div class="dtxts">
+                            <input class="txts" type="text" id="txtTheme" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; height: 430px; background: #EEF3F6;">
+            <div class="main">
+                <div class="">
+                    <div class="dml">
+                        <label class="lbl">正文</label>
+                    </div>
+                    <div class="dmr">
+                        <div class="dcontrol" id="btnGroups">
+                            <a class="ac" style="margin: 0 2px 0 0"><b title="加粗" id="bold" style="background-position: -128px -64px;"></b></a>
+                            <a class="ac"><b title="斜体" id="italic" style="background-position: -160px -64px"></b></a>
+                            <a class="ac"><b title="下划线" id="underline" style="background-position: -192px -64px"></b></a>
+                            <a class="ac">
+                                <b title="选择字体颜色" id="fontColor" style="background-position: -256px -64px"></b>
+                                <div id="classBoard" class="colorBoard"></div>
+                            </a>
+                            <a class="ac">
+                                <b title="选择字体背景" id="backColor" style="background-position: -288px -64px"></b>
+                                <div id="classBoard2" class="colorBoard2">
+                                </div>
+                            </a>
+                            <a class="ac"><b title="格式刷" id="brush" style="background-position: -321px -180px"></b></a>
+                            <a class="ac"><b title="插入横线" id="hr" style="background-position: -353px -64px"></b></a>
+                            <a class="ac"><b title="清除格式" id="removeFormat" style="background-position: -320px -64px"></b></a>
+                            <a class="ac aclick"><b class="aalign" title="左对齐" id="justifyLeft" style="background-position: -288px -160px"></b></a>
+                            <a class="ac"><b class="aalign" title="居中对齐" id="justifyCenter" style="background-position: -256px -160px"></b></a>
+                            <a class="ac"><b class="aalign" title="右对齐" id="justifyRight" style="background-position: -320px -160px"></b></a>
+                            <a class="ac"><b title="符号列表" id="insertUnorderedList" style="background-position: -128px -159px"></b></a>
+                            <a class="ac"><b title="数字列表" id="insertOrderedList" style="background-position: -160px -160px"></b></a>
+                            <a class="ac"><b class="aindent" title="增加缩进" id="indent" style="background-position: -224px -160px"></b></a>
+                            <a class="ac"><b class="anident" title="减少缩进" id="outdent" style="background-position: -192px -160px"></b></a>
+                            <a class="ac"><b class="anident" title="添加图片" id="addPic" style="background-position: -128px -112px"></b></a>
+                            <input type="file" id="fPic" hidden="hidden" />
+                            <a class="ac">
+                                <b id="addFace" title="添加表情" style="background-position: -1px -112px"></b>
+                                <div id="faceBoard" class="faceBoard">
+                                </div>
+                            </a>
+                            <select id="selFontName" style="width: 100px;">
+                                <option style="display: none;">字体</option>
+                                <option>宋体</option>
+                                <option>黑体</option>
+                                <option>楷体</option>
+                                <option>隶书</option>
+                                <option>幼圆</option>
+                                <option>微软雅黑</option>
+                                <option>Arial</option>
+                                <option>Arial Black</option>
+                                <option>Times New Roman</option>
+                                <option>Verdana</option>
+                            </select>
+                            <select id="selFontSize" style="width: 100px;">
+                                <option style="display: none;">字号</option>
+                                <option value="1">极小</option>
+                                <option value="2">特小</option>
+                                <option value="3">小</option>
+                                <option value="4">中</option>
+                                <option value="5">大</option>
+                                <option value="6">较大</option>
+                                <option value="7">最大</option>
+                            </select>
+                        </div>
+                        <div class="dframe">
+                            <iframe class="frame" id="frame"></iframe>
+                            <script src="js/f_write.js"></script>
+                            <script>
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

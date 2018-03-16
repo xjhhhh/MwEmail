@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="css/draft.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="dm">
+        <div class="showMsg" id="divShow">
+            <span class="msg">删除成功</span>
+        </div>
+        <div class="content">
+            <div class="d_title">
+                <p><a style="color: #013871; font-weight: bold;">草稿箱 </a>(共 <a id="count">51</a> 封)</p>
+            </div>
+            <div class="d_btns">
+                <input class="btns" type="button" id="btnDelete" value="删除草稿" />
+                <input class="btns" type="button" id="btnRefresh" value="刷新" />
+            </div>
+            <div class="d_tPage">
+                <a id="pageInfo" data-pageindex="" data-pagecount="">1/4页</a>
+                <a class="aPage" id="prev" disabled="true">上一页</a>
+                <a class="aPage" id="next" disabled="true">下一页</a>
+            </div>
+            <div class="main">
+                <div>
+                    <table cellspacing="0" cellpadding="0" class="tHeader">
+                        <tr id="s">
+                            <td class="tChk" style="border-right: 1px solid #c6c6c6;">
+                                <input type="checkbox" id="chkAll" class="chks" />
+                                <label for="chkAll" style="line-height: 19px; vertical-align: middle; user-select: none; cursor: pointer;">全选</label>
+                            </td>
+                            <td class="tReceive" style="border-right: 1px solid #c6c6c6;">收件人</td>
+                            <td class="tTitle" style="border-right: 1px solid #c6c6c6;">主题</td>
+                            <td class="tTime">时间</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table id="t_mail" class="t_mail" cellspacing="0" cellpadding="0" style="table-layout: fixed; width: 100%; height: auto;">
+                        <!--此处自动加载-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/draft.js"></script>
+</body>
+</html>

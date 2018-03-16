@@ -1,0 +1,273 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-width: 1024px;
+    height: 590px;
+}
+
+.content {
+    width: 100%;
+    height: 590px;
+}
+
+.dm {
+    width: 90%;
+    height: 140px;
+    background: #C3D3E2;
+    margin: 0 auto;
+    /*padding-top: 10px;*/
+}
+
+.dbs {
+    height: 50px;
+    /*background: blue;*/
+    padding-left: 20px;
+}
+
+.abs {
+    padding: 0 12px;
+    font-size: 14px;
+    background: -webkit-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+    border: 1px solid #888;
+    display: inline-block;
+    height: 22px;
+    min-width: 24px;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+    .abs:active {
+        position: relative;
+        top: 1px;
+    }
+
+.main {
+    width: 90%;
+    height: 430px;
+    margin: 0 auto;
+    background: #EEF3F6;
+    padding-top: 10px;
+}
+
+.dds {
+    width: 100%;
+    height: 25px;
+    padding: 10px 0;
+}
+
+.dlbls {
+    width: 5%;
+    height: 24px;
+    font-size: 12px;
+    line-height: 24px;
+    float: left;
+    text-align: right;
+}
+
+.dtxts {
+    width: 95%;
+    height: 24px;
+    float: left;
+    text-align: left;
+}
+
+.txts {
+    width: 90%;
+    height: 24px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+.dml {
+    width: 5%;
+    height: 430px;
+    font-size: 12px;
+    line-height: 26px;
+    float: left;
+    text-align: right;
+}
+
+.dmr {
+    width: 95%;
+    height: 430px;
+    box-sizing: border-box;
+    float: left;
+    text-align: left;
+    /*border: 1px solid black;*/
+}
+
+.dcontrol {
+    width: 90%;
+    height: 26px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 2px 2px 5px #d3d6da;
+    user-select: none;
+    background: #fff;
+}
+
+.ac {
+    width: 24px;
+    height: 24px;
+    margin: 0 2px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+    .ac:hover {
+        background: #E6E6E6;
+    }
+
+    .ac b {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background-image: url(../img/editor_v2.png);
+        color: #7d7d7d;
+        margin-left: 2px;
+        margin-top: 3px;
+    }
+
+.aclick {
+    background: #E6E6E6;
+}
+
+select {
+    cursor: pointer;
+}
+
+.dframe {
+    width: 90%;
+    height: 404px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    border: 1px solid #e1e1e1;
+    border-top: none;
+    user-select: none;
+    background: #fff;
+}
+
+.frame {
+    width: 100%;
+    height: 402px;
+    display: block;
+    border: 0px;
+}
+
+.colorBoard {
+    width: 160px;
+    height: 100px;
+    border: 1px solid;
+    position: absolute;
+    top: 24px;
+    z-index: 999;
+    background: white;
+    display: none;
+}
+
+.colorBoard2 {
+    width: 160px;
+    height: 100px;
+    border: 1px solid;
+    position: absolute;
+    top: 24px;
+    z-index: 999;
+    background: white;
+    display: none;
+}
+
+i {
+    box-sizing: border-box;
+}
+
+    i:hover {
+        border: 1px solid black;
+    }
+
+.dfc, .dfc2 {
+    width: 20px;
+    height: 20px;
+    float: left;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+    .dfc:hover {
+        border: 1px solid black;
+    }
+
+    .dfc2:hover {
+        border: 1px solid black;
+    }
+
+    .dfc div, .dfc2 div {
+        margin: 2px auto;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+        border: 1px solid #DFE6F6;
+        box-sizing: border-box;
+    }
+
+.faceBoard {
+    width: 375px;
+    height: 175px;
+    border: 1px solid;
+    position: absolute;
+    top: 24px;
+    z-index: 999;
+    background: white;
+    display: none;
+}
+
+.dface {
+    float: left;
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+    .dface:hover {
+        border: 1px solid black;
+    }
+
+.block {
+    display: block;
+}
+
+.showMsg {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 18px;
+    height: 26px;
+    display: block;
+    z-index: -1;
+}
+
+.msg {
+    background: #68af02;
+    height: 20px;
+    line-height: 18px;
+    border-radius: 3px;
+    padding: 3px 23px;
+    font-size: 12px;
+    color: white;
+}

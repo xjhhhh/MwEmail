@@ -1,0 +1,131 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 590px;
+    min-width: 1024px;
+    background-color: #EAF1F7;
+}
+
+.dleft {
+}
+
+.dm {
+    width: 70%;
+    height: 480px;
+    margin: 0 auto;
+    /*background:#fff;*/
+}
+
+.dright {
+}
+
+.up {
+    width: 100%;
+    height: 150px;
+}
+
+.down {
+    width: 100%;
+    height: 330px;
+}
+
+.content {
+    width: 300px;
+    float: left;
+}
+
+.wea-gg {
+    width: 300px;
+    float: right;
+}
+
+.greet {
+    padding: 20px 20px 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.mail {
+    line-height: 16px;
+    padding-left: 40px;
+    position: relative;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.mail-ico {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/mail.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    overflow: hidden;
+}
+
+.mail-enter {
+    height: 20px;
+    font-size: 14px;
+    padding-left: 35px;
+    font-weight: bold;
+    color: #3D5E86;
+}
+
+#mailbox, #write {
+    padding: 0 5px;
+}
+
+    #mailbox:hover, #write:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+.main {
+    width: 100%;
+    height: 292px;
+}
+
+.gg2 {
+    float: right;
+}
+
+.dbs {
+    width: 100%;
+    height: 110px;
+    position: relative;
+    background: #F4F6F8;
+    /*margin: -8px 0 0 0;*/
+}
+
+#foot {
+    width: 80%;
+    height: 110px;
+    margin: 0 auto;
+}
+
+#f_blank {
+    width: 100%;
+    height: 20px;
+    margin: 0;
+}
+
+#f_navigation p {
+    color: gray;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+    #f_navigation p a {
+        cursor: pointer;
+    }
+
+        #f_navigation p a:hover {
+            text-decoration: underline;
+        }

@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            min-width: 864px;
+            background: #fff;
+        }
+
+        .main {
+            padding: 5px;
+        }
+
+        .cont {
+            width: 100%;
+            min-height: 572px;
+            background-color: darkgrey;
+            font-size: 12px;
+            position: relative;
+        }
+
+        .box {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            position: absolute;
+            top: 50px;
+            left: 300px;
+            padding: 25px 50px;
+            border-radius: 5px;
+        }
+
+        .dl {
+            width: 30%;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+            font-size: 14px;
+        }
+
+        .txt {
+            width: 70%;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+        }
+
+        .tp {
+            height: 20px;
+            padding-left: 5px;
+        }
+
+        .dok {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            float: left;
+            text-align: center;
+        }
+
+        .aOK {
+            -moz-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+            box-shadow: inset 0px 1px 0px 0px #bbdaf7;
+            background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+            background: -moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+            background-color: #79bbff;
+            -webkit-border-top-left-radius: 4px;
+            -moz-border-radius-topleft: 4px;
+            border-top-left-radius: 4px;
+            -webkit-border-top-right-radius: 4px;
+            -moz-border-radius-topright: 4px;
+            border-top-right-radius: 4px;
+            -webkit-border-bottom-right-radius: 4px;
+            -moz-border-radius-bottomright: 4px;
+            border-bottom-right-radius: 4px;
+            -webkit-border-bottom-left-radius: 4px;
+            -moz-border-radius-bottomleft: 4px;
+            border-bottom-left-radius: 4px;
+            text-indent: 0px;
+            border: 1px solid #84bbf3;
+            display: inline-block;
+            color: #ffffff;
+            font-family: Arial Black;
+            font-size: 14px;
+            font-weight: bold;
+            font-style: normal;
+            height: 23px;
+            line-height: 23px;
+            width: 70px;
+            text-decoration: none;
+            text-align: center;
+            text-shadow: 1px 1px 0px #528ecc;
+        }
+
+            .aOK:hover {
+                background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+                background: -moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+                background-color: #378de5;
+            }
+
+            .aOK:active {
+                position: relative;
+                top: 1px;
+            }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="cont">
+            <div class="box">
+                <div class="dl">旧密码</div>
+                <div class="txt">
+                    <input class="tp" type="text" id="txtOpwd" />
+                </div>
+                <div class="dl">新密码</div>
+                <div class="txt">
+                    <input class="tp" type="text" id="txtNpwd" />
+                </div>
+                <div class="dl">确认新密码</div>
+                <div class="txt">
+                    <input class="tp" type="text" id="txtOKpwd" />
+                </div>
+                <div class="dok">
+                    <a class="aOK">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(".aOK").click(function () {
+            var opwd = $("#txtOpwd").val();
+            var npwd = $("#txtNpwd").val();
+            var okpwd = $("#txtOKpwd").val();
+            if (opwd == "") {
+                alert("请输入旧密码！");
+                $("#txtOpwd").focus();
+                return;
+            }
+            if (npwd == "") {
+                alert("请输入新密码！");
+                $("#txtNpwd").focus();
+                return;
+            }
+            if (okpwd != npwd) {
+                alert("两次密码输入不一致,请重新输入");
+                $("#txtNpwd").val("");
+                $("#txtOKpwd").val("");
+                $("#txtNpwd").focus();
+                return;
+            }
+            var loginId = window.sessionStorage.Name;
+            $.ajax({
+                url: "admin.ashx",
+                type: "get",
+                data: { Index: 1, LoginId: loginId, Pwd: okpwd },
+                success: function (text) {
+                    if (text=="修改成功") {
+                        alert("密码修改成功,请重新登录");
+                        window.parent.window.parent.location.href = "login.html";
+                    }
+                }
+            })
+        });
+        $("body").keydown(function () {
+            if (event.keyCode == "13") {
+                $(".aOK").click();
+            }
+        });
+    </script>
+</body>
+</html>

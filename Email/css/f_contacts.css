@@ -1,0 +1,157 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    height: 590px;
+    min-width: 1024px;
+    font-size: 12px;
+}
+
+.dm {
+    width: 100%;
+    height: 590px;
+}
+
+.divLeft {
+    width: 190px;
+    height: 590px;
+    background: #F5F9FC;
+    border-right: 1px solid #B0BAC6;
+    box-sizing: border-box;
+    float: left;
+}
+
+.divRight {
+    margin-left: 190px;
+    width: auto;
+    height: 590px;
+    min-width: 834px;
+    background: #fff;
+}
+
+.head {
+    margin: 0 8px;
+    font-size: 16px;
+    font-weight: bold;
+    width: auto;
+    height: 30px;
+    line-height: 30px;
+    padding: 15px 10px 5px 10px;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.new-g {
+    font-size: 12px;
+    font-weight: 400;
+    color: #3D5E86;
+    float: right;
+    position: relative;
+    top: 2px;
+}
+
+    .new-g:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+#add-g {
+    margin-right: 5px;
+}
+
+.title {
+    font-size: 14px;
+    margin: 0 8px;
+    padding: 0 10px;
+    color: #999;
+    padding: 10px;
+}
+
+.group, .group2 {
+    font-size: 12px;
+    padding: 0 10px;
+    color: black;
+    padding: 5px 20px;
+    height: 16px;
+    cursor: pointer;
+}
+
+    .group:hover {
+        background: #D9E7F2;
+    }
+
+.gc {
+    background: #D9E7F2;
+}
+
+.gn {
+    max-width: 120px;
+    line-height: 16px;
+    float: left;
+    height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sc {
+    vertical-align: middle;
+    float: right;
+    display: none;
+}
+
+.g-add-btns {
+    font-size: 12px;
+    padding: 0 10px;
+    color: black;
+    padding: 5px 20px;
+    height: 16px;
+    text-align: right;
+}
+
+.adg-no, .adg-ok {
+    border: 1px solid #1d567d;
+    color: #fff !important;
+    background: -webkit-linear-gradient(top,#2a96d8 0%,#257db9 90%,#2e89c5 100%);
+    font-size: 12px;
+    display: inline-block;
+    height: 20px;
+    min-width: 24px;
+    padding: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 2px;
+    line-height: 20px;
+}
+
+.adg-no {
+    color: #000000 !important;
+    background: -webkit-linear-gradient(top,#ffffff 0%,#ebebeb 90%,#F3F3F3 100%);
+    border: 1px solid #888;
+}
+
+.d-txt-adg {
+    font-size: 12px;
+    padding: 0 10px;
+    color: black;
+    padding: 5px 20px;
+    height: 16px;
+}
+
+.hr {
+    padding-top: 10px;
+    margin: 0 5px;
+    border-bottom: 1px solid #bcbcbc;
+}
+
+#frame {
+    width: 100%;
+    height: auto;
+    min-height: 590px;
+    border: 0;
+    display: block;
+}

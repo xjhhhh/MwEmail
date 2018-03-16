@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            min-width: 864px;
+            background: #fff;
+        }
+
+        .main {
+            padding: 5px;
+        }
+
+        .cont {
+            width: 100%;
+            min-height: 572px;
+            background-color: darkgrey;
+            font-size: 12px;
+        }
+
+        .tHeader {
+            border-top: 1px solid #fff;
+            color: #3b3b3b;
+            box-sizing: border-box;
+            table-layout: fixed;
+            width: 100%;
+            height: auto;
+        }
+
+            .tHeader tr {
+                height: 24px;
+                line-height: 24px;
+            }
+
+            .tHeader td {
+                border-bottom: 1px solid #c1c8d2;
+                /*border-right:1px solid #c1c8d2;*/
+                background-color: #f2f4f6;
+                -webkit-font-smoothing: subpixel-antialiased;
+            }
+
+        .tr {
+            height: 25px;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            background-color: #fff;
+        }
+
+            .tr:hover {
+                background: #F5F5F5;
+            }
+
+            .tr td {
+                border-bottom: 1px solid #D5D6D7;
+            }
+
+        .tId {
+            width: 200px;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .tUser {
+            width: 300px;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+
+        .tPhone {
+            width: auto;
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="cont">
+            <div class="main">
+                <div>
+                    <table cellspacing="0" cellpadding="0" class="tHeader">
+                        <tr id="s">
+                            <td class="tId" style="border-right: 1px solid #c6c6c6;">编号</td>
+                            <td class="tUser" style="border-right: 1px solid #c6c6c6;">用户名</td>
+                            <td class="tPhone" style="border-right: 1px solid #c6c6c6;">电话</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table id="t_mail" cellspacing="0" cellpadding="0" style="table-layout: fixed; width: 100%; height: auto;">
+                        <!--此处自动加载-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        function loadData() {
+            $.getJSON("user.ashx", { Id: 0 }, function (data) {
+                var html = "";
+                $.each(data, function (i, obj) {
+                    html += "<tr class='tr' data-id='" + obj.U_Id + "'>" +
+                            "<td class='tId'>" + obj.U_Id + "</td>" +
+                            "<td class='tUser'>" + obj.U_LoginId + "</td>" +
+                            "<td class='tPhone'>" + obj.U_Phone + "</td>"
+                    "</tr>";
+                });
+                $("#t_mail").html(html);
+            })
+        }
+        loadData();
+
+    </script>
+</body>
+</html>

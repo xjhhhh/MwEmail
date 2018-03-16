@@ -1,0 +1,256 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../img/bj_m.jpg');
+    background-size: cover;
+    min-width:1024px;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+.dm {
+    width: 550px;
+    height: 700px;
+    background: white;
+    margin-left: 200px;
+    margin-top: 50px;
+    border-radius: 5px;
+}
+
+.txts {
+    width: 286px;
+    height: 30px;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+
+i {
+    font-size: 12px;
+    line-height: 36px;
+    color: red;
+}
+
+.lbls {
+    font-size: 14px;
+    line-height: 36px;
+}
+
+.lbls2 {
+    font-size: 12px;
+    padding-left: 10px;
+    opacity: 0.5;
+}
+
+.lbl3 {
+    opacity: 1;
+    color: black;
+}
+
+.lbl4 {
+    opacity: 1;
+    color: red;
+}
+
+.lbl5 {
+    opacity: 1;
+    color: green;
+}
+
+.db {
+    width: 100%;
+    height: 70px;
+}
+
+.d1 {
+    width: 25%;
+    height: 70px;
+    float: left;
+    text-align: right;
+}
+
+.d2 {
+    width: 75%;
+    height: 40px;
+    float: left;
+    text-align: left;
+}
+
+.d3 {
+    width: 75%;
+    height: 30px;
+    float: right;
+    text-align: left;
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+}
+
+.rbtn {
+    -moz-box-shadow: inset 0px 0px 0px 0px #dcecfb;
+    -webkit-box-shadow: inset 0px 0px 0px 0px #dcecfb;
+    box-shadow: inset 0px 0px 0px 0px #dcecfb;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #3e88d1) );
+    background: -moz-linear-gradient( center top, #bddbfa 5%, #3e88d1 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#3e88d1');
+    background-color: #bddbfa;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+    text-indent: 0px;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    height: 28px;
+    line-height: 28px;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0px #528ecc;
+    cursor: pointer;
+}
+
+    .rbtn:active {
+        position: relative;
+        top: 1px;
+    }
+
+.rbtn2 {
+    -moz-box-shadow: inset 0px 0px 0px 0px #dcecfb;
+    -webkit-box-shadow: inset 0px 0px 0px 0px #dcecfb;
+    box-shadow: inset 0px 0px 0px 0px #dcecfb;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #3e88d1) );
+    background: -moz-linear-gradient( center top, #bddbfa 5%, #3e88d1 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#3e88d1');
+    background-color: #bddbfa;
+    -webkit-border-top-left-radius: 4px;
+    -moz-border-radius-topleft: 4px;
+    border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -moz-border-radius-topright: 4px;
+    border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -moz-border-radius-bottomright: 4px;
+    border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-bottom-left-radius: 4px;
+    text-indent: 0px;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    height: 28px;
+    line-height: 28px;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0px #528ecc;
+    cursor: pointer;
+}
+
+.content {
+    width: 100%;
+    height: 872px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.dt {
+    width: 100%;
+    height: 60px;
+    background: white;
+}
+
+.dp {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #DDD;
+}
+
+h3 {
+    line-height: 60px;
+    padding-left: 200px;
+}
+
+.pt {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 22px;
+}
+
+.ps {
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    display: inline;
+    padding-left: 100px;
+    color: black;
+}
+
+    .ps a {
+        cursor: pointer;
+    }
+
+        .ps a:hover {
+            text-decoration: underline;
+        }
+
+.dEamil {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.sa {
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 36px;
+}
+
+#sel {
+    position: relative;
+    top: -1px;
+    height: 36px;
+}
+
+#myCon {
+    background: pink;
+    margin-left: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+}
+
+#chkAgree {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 3px;
+    width: 14px;
+    height: 14px;
+}
+
+.foot {
+    width: 100%;
+    height: 30px;
+    background: white;
+}

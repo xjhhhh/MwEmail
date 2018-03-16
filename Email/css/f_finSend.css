@@ -1,0 +1,92 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-width: 1024px;
+    width: 100%;
+    max-height: 590px;
+    background: #F5F7FA;
+    font-size: 12px;
+}
+
+.dm {
+    width: 100%;
+    height: 590px;
+}
+
+.content {
+    width: 70%;
+    height: 590px;
+    margin: 0 auto;
+    /*border: 1px solid;*/
+}
+
+.up {
+    width: 100%;
+    height: 180px;
+}
+
+.suc {
+    padding-top: 50px;
+}
+
+.h1 {
+    display: block;
+    padding-left: 45px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 32px;
+    color: #222;
+    position: relative;
+    font-family: 'Microsoft Yahei',simhei,verdana;
+    font-weight: 400;
+}
+
+.ico {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 35px;
+    height: 35px;
+    background-image: url(img/g.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.dal {
+    margin-top: 15px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.al {
+    margin: 5px;
+    color: #3D5E86;
+}
+
+    .al:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+.down {
+    padding: 10px 0;
+}
+
+.dgg {
+    width: 622px;
+    background-color: #fff;
+    height: 262px;
+    box-sizing: border-box;
+    border: #DEE2E4 1px solid;
+    /*padding: 5px;*/
+}
+
+.gg {
+    margin: 5px;
+    float: left;
+}

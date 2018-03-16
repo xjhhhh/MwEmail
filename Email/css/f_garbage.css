@@ -1,0 +1,201 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-width: 1024px;
+    width: 100%;
+    height: 590px;
+    background: #F3F8FC;
+    font-size: 12px;
+}
+
+.dm {
+    width: 100%;
+    height: 590px;
+}
+
+.content {
+    width: 90%;
+    height: 588px;
+    background: white;
+    margin: 0 auto;
+    border: 1px solid #C3CED5;
+}
+
+.d_title {
+    height: 40px;
+    margin: 0 25px;
+}
+
+    .d_title p {
+        font-size: 14px;
+        line-height: 40px;
+    }
+
+        .d_title p a {
+            font-size: 14px;
+        }
+
+.d_btns {
+    height: 40px;
+    margin: 0 20px;
+    line-height: 40px;
+    float: left;
+}
+
+.d_tPage {
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    margin-right: 60px;
+}
+
+.btns {
+    height: 22px;
+    padding: 0 12px;
+    margin: 0 5px;
+    line-height: 40px;
+}
+
+.selMail {
+    height: 22px;
+    font-size: 14px;
+    line-height: 40px;
+    margin-bottom: -2px;
+    position: relative;
+    top: 1px;
+}
+
+.main {
+    width: 100%;
+    height: 508px;
+}
+
+.tHeader {
+    border-top: 1px solid #fff;
+    color: #3b3b3b;
+    box-sizing: border-box;
+    table-layout: fixed;
+    width: 100%;
+    height: auto;
+}
+
+    .tHeader tr {
+        height: 26px;
+        line-height: 26px;
+    }
+
+    .tHeader td {
+        border-bottom: 1px solid #c1c8d2;
+        background-color: #f2f4f6;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+.tr {
+    height: 30px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+    .tr:hover {
+        background: #F5F5F5;
+    }
+
+    .tr td {
+        border-bottom: 1px solid #D5D6D7;
+    }
+
+.tChk {
+    width: 100px;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+.tSend {
+    width: 200px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.tTitle {
+    width: auto;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.tTime {
+    width: 200px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+.chks {
+    margin: 3px 3px 3px 4px;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.ch {
+    margin: 3px 3px 3px 10px;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.trOne {
+    height: 40px;
+}
+
+.tdOne {
+    width: auto;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.aPage {
+    color: #164A84;
+    cursor: pointer;
+    padding: 0 2px;
+    border: 0px;
+    background-color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+    .aPage:hover {
+        text-decoration: underline;
+    }
+
+.showMsg {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 18px;
+    height: 26px;
+    display: none;
+}
+
+.msg {
+    background: #68af02;
+    height: 20px;
+    line-height: 18px;
+    border-radius: 3px;
+    padding: 3px 23px;
+    color: white;
+}
+
+#aCh:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

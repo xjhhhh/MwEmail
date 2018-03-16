@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>写信预览</title>
+    <meta charset="utf-8" />
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link href="css/preview.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="md">
+        <div class="head">
+        </div>
+        <div class="info">
+            <div class="title">
+                <p class="pTitle">测试邮件</p>
+                <p class="pSend"><span>发件人：</span><a id="aSend">user@user.com</a></p>
+                <p class="pReceive"><span>收件人：</span><a id="aReceive">sss</a></p>
+                <p class="pTime"><span>时&nbsp;&nbsp;&nbsp;间：</span><a id="aTime">2017年12月23日(星期六) 上午9:08</a></p>
+            </div>
+        </div>
+        <div class="content">
+        </div>
+    </div>
+    <script>
+        function loadMail() {
+            var receive = window.sessionStorage.Receive;
+            var theme = window.sessionStorage.Theme;
+            var contents = window.sessionStorage.Content;
+            var time = new Date().toLocaleString();
+            if (receive == null || receive == "")
+                $(".pReceive").css("display", "none");
+            else {
+                $(".pReceive").css("display", "block");
+                $("#aReceive").text(receive);
+            }
+            if (theme == null || theme == "")
+                $(".pTitle").text("(无主题)");
+            else
+                $(".pTitle").text(theme);
+            $("#aSend").text(window.sessionStorage.Name);
+            $("#aTime").text(time);
+            $(".content").html(contents);
+        }
+        loadMail();
+        var s = document.documentElement.clientHeight;
+    </script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 100%;
+            min-width: 1024px;
+            height: 662px;
+            background: #fff;
+        }
+
+        .head {
+            width: 100%;
+            height: 60px;
+            background-color: rgb(5,6,7);
+        }
+
+        .cont {
+            width: 100%;
+            height: 582px;
+            background-color: cadetblue;
+        }
+
+        .bottom {
+            width: 100%;
+            height: 20px;
+            background-color: #fff;
+        }
+
+        .dt {
+        }
+
+        .pt {
+            padding-top: 15px;
+            width: 40%;
+            float: left;
+            font-size: 16px;
+            padding-left: 10px;
+            font-weight: bold;
+            color: rgb(194, 199, 218);
+        }
+
+        .pt2 {
+            padding-top: 15px;
+            width: 40%;
+            font-size: 14px;
+            padding-right: 20px;
+            font-weight: bold;
+            color: rgb(194, 199, 218);
+            float: right;
+            text-align: right;
+            cursor: pointer;
+        }
+
+        .du {
+            clear: both;
+            padding: 0 20%;
+        }
+
+        .unav {
+            height: 24px;
+            line-height: 24px;
+            list-style: none;
+            color: rgb(194, 199, 218);
+        }
+
+        .lbtn {
+            padding: 0 20px;
+            margin: 0 2px;
+            float: left;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+            .lbtn:hover {
+                cursor: pointer;
+                background-color: #D5D4D9;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: #000;
+            }
+
+        .lc {
+            background-color: #D5D4D9;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            color: #000;
+        }
+
+        .pb {
+            font-size: 14px;
+            line-height: 20px;
+            padding-left: 20px;
+        }
+
+        #frame {
+            width: 100%;
+            height: 582px;
+            border: 0;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="head">
+            <div class="dt">
+                <p class="pt">魅我邮箱后台管理中心</p>
+                <p class="pt2"><a id="aExit">安全退出</a></p>
+            </div>
+            <div class="du">
+                <ul class="unav">
+                    <li class="lbtn lc">邮件管理</li>
+                    <li class="lbtn">用户管理</li>
+                    <li class="lbtn">投诉信息</li>
+                    <li class="lbtn">系统管理</li>
+                </ul>
+            </div>
+        </div>
+        <div class="cont">
+            <iframe id="frame" src="b_main.html?id=1"></iframe>
+        </div>
+        <div class="bottom">
+            <p class="pb">欢迎您，管理员[<a id="aAdmin"></a>]，今天是：<a id="aTime"></a></p>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        function loadFun() {
+            $("#aExit").click(function () {
+                window.sessionStorage.Name = null;
+                $(location).attr("href", "login.html");
+            });
+            $(".lbtn").click(function () {
+                if ($(this).hasClass("lc"))
+                    return;
+                else {
+                    $(".lbtn[class~=lc]").removeClass("lc");
+                    $(this).addClass("lc");
+                }
+                var tag = $(this).text();
+                switch (tag) {
+                    case "邮件管理":
+                        $("#frame").attr("src", "b_main.html?id=1");
+                        break;
+                    case "用户管理":
+                        $("#frame").attr("src", "b_main.html?id=2");
+                        break;
+                    case "投诉信息":
+                        $("#frame").attr("src", "b_main.html?id=3");
+                        break;
+                    case "系统管理":
+                        $("#frame").attr("src", "b_main.html?id=4");
+                        break;
+                }
+            });
+        }
+        function loadData() {
+            var name = window.sessionStorage.Name;
+            var time = new Date().toLocaleDateString();
+            $("#aAdmin").text(name);
+            $("#aTime").text(time);
+        }
+        loadData();
+        loadFun();
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>免费注册</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/f_register.js"></script>
+    <link href="css/f_register.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--main-->
+    <div class="content">
+        <div class="dt">
+            <!--<h3>魅我邮箱</h3>-->
+            <img src="img/logo_j.png" style="margin-left:100px;" />
+        </div>
+        <div class="dm">
+            <div class="dp">
+                <p class="pt">欢迎注册魅我邮箱</p>
+            </div>
+            <div style="width: 100%;">
+                <div class="dEamil">
+                    <div class="d1"><i>*</i><label class="lbls"> 邮箱地址：</label></div>
+                    <div class="d2">
+                        <input class="txts" type="text" id="txtEmail" style="width: 170px; float: left;">
+                        <span class="sa">@</span>
+                        <select id="sel">
+                            <option value="meiwo.com">meiwo.com</option>
+                            <option value="meiwo.cn">meiwo.cn</option>
+                        </select>
+                    </div>
+                    <div class="d3">
+                        <label class="lbls2" id="lblEmail">6~18个字符，可作用字母、数字、下划线</label>
+                    </div>
+                </div>
+                <div class="db">
+                    <div class="d1"><i>*</i><label class="lbls"> 密码：</label></div>
+                    <div class="d2">
+                        <input class="txts" type="password" id="txtPwd">
+                    </div>
+                    <div class="d3">
+                        <label class="lbls2" id="lblPwd">6~16个字符，区分大小写</label>
+                    </div>
+
+                </div>
+                <div class="db">
+                    <div class="d1"><i>*</i><label class="lbls"> 确认密码：</label></div>
+                    <div class="d2">
+                        <input class="txts" type="password" id="txtPwd2">
+                    </div>
+                    <div class="d3">
+                        <label class="lbls2" id="lblPwd2">请再次填写密码</label>
+                    </div>
+
+                </div>
+                <div class="db">
+                    <div class="d1"><i>*</i><label class="lbls"> 手机号码：</label></div>
+                    <div class="d2">
+                        <input class="txts" type="text" id="txtNum">
+                    </div>
+                    <div class="d3">
+                        <label class="lbls2" id="lblPhone">忘记密码时，可以通过该手机号码快速找回密码</label>
+                    </div>
+
+                </div>
+                <div class="db">
+                    <div class="d1"><i>*</i><label class="lbls"> 图片验证码：</label></div>
+                    <div class="d2">
+                        <input class="txts" type="text" id="txtCcode" style="width: 205px; float: left;">
+                        <canvas id="myCon" data-code="" width="70" height="36"></canvas>
+                    </div>
+                    <div class="d3">
+                        <label class="lbls2" id="lblCode">请输入右侧的验证码，不区分大小写</label>
+                    </div>
+
+                </div>
+                <div class="db">
+                    <div class="d1" style="height: 41px;"></div>
+                    <div class="d2" style="height: 41px;">
+                        <input type="button" class="rbtn2" id="btnSendCode" value="免费发送短信验证码" style="margin-left: 5px; font-size: 12px;" />
+                    </div>
+
+                </div>
+                <div class="db">
+                    <div class="d1"><i>*</i><label class="lbls"> 短信验证码：</label></div>
+                    <div class="d2">
+                        <input class="txts" type="text" id="txtPcode" data-code="">
+                    </div>
+                    <div class="d3">
+                        <label class="lbls2" id="lblPcode">请查收手机短信，并填写短信中的验证码</label>
+                    </div>
+
+                </div>
+                <div class="db">
+                    <div class="d1"></div>
+                    <div class="d2">
+                        <input type="checkbox" id="chkAgree" checked="checked">
+                        <label class="lbls " for="chkAgree">同意<a href="#">"服务条款"</a>和<a href="#">"隐私权相关政策"</a></label>
+                    </div>
+                    <div class="d3">
+                        <label class="lbls2" id="lblService">请接受服务条款</label>
+                    </div>
+
+                </div>
+                <div class="db">
+                    <div class="d1"></div>
+                    <div class="d2">
+                        <input type="button" class="rbtn" id="btnRegister" value="立即注册" />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--foot-->
+    <div class="foot">
+        <p class="ps">魅我公司 版权所有 </p>
+        <p class="ps" style="padding-left: 20px;">Copyright © 2017 - 2018 MeiWo.<a>All Rights Reserved.</a></p>
+        <p class="ps" style="padding-left: 40px;"><a>魅我首页</a> | <a>魅我音乐</a> | <a>意见反馈</a> | <a>不良信息举报</a></p>
+
+    </div>
+</body>
+
+</html>

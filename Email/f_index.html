@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<meta charset="utf-8" />
+	<link href="css/f_index.css" rel="stylesheet" />
+</head>
+<body>
+	<div class="dm">
+		<div class="up">
+			<div class="content">
+				<div class="he">
+					<div class="greet"><a id="time"></a>，<a id="user"></a>。</div>
+					<div class="mail"><b class="mail-ico"></b>邮件：<a id="count">0</a> 封未读邮件</div>
+					<div class="mail-enter"><a id="mailbox">进入收件箱</a><a id="write">写信</a></div>
+				</div>
+			</div>
+			<div class="wea-gg">
+				<iframe allowtransparency="true" frameborder="0" width="180" height="36" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=0&v=0&d=3&bd=0&k=8080c0&f=0000ff&ltf=00ff40&htf=cc0000&q=1&e=1&a=1&c=54511&w=180&h=36&align=center"></iframe>
+			</div>
+		</div>
+		<div class="down">
+			<div class="main">
+				<div style="width: 100%; height: 250px;">
+				</div>
+				<div>
+					<a id="dish0" href="https://d-clkservice.youdao.com/clk/request.s?k=kPR9vMu7I34MShAmH8s0XhER8pwfMkvXrleou%2B%2FrYsNi6QmGByPg8kpacCQdvI2tVQTfwjipWlr2USUy2POcJkv6BTUQP77vimzBTIdYiIDbi7f4unp7f6GDOW9WfaagOhGUR6%2FxSPSiMYCh8EslHzlDne9Qtg7S3EQ%2FY%2Bv2N%2Fo7HOVc7pYD6Eu1X%2BVbLsD90BMwTd1aCp5OZSPmnPP%2Bh%2B7bTneeVHasRRs44emk3IFZVn8AwVQF9fASSMtW3PjsfTmdh2f53pVyrodbx5vTqJcdITS0bqDMLJXBCoEPC01GDUcnwb%2BXFcSldEBhE52i4E4I5kiWJxW8btw2Z6xpbVvaEwVxgAA7VtXWuIGsZl8jHB0yM%2Fwo3fgu3RxR9IqWZqvNxIeylEGc%2FWz8k8KfkuHrEN9nwF%2Bu10k5Dd75WjZPV0pc8nh%2BcE5K1vwtM%2BQl18aPqEcXCaY4wICrlYgqr9fGj6hHFwmmOMCAq5WIKq9imVhw%2Fe7w7%2F9eEKzIfDt5u%2Bw0rfKbMMem%2BrxI37eBRw%3D%3D&amp;d=https%3A%2F%2Fclick.gridsumdissector.com%2Ftrack.ashx%3Fgsadid%3Dgad_158_ek3442d2&amp;s=16" target="_blank">
+						<img src="img/gg-1.jpg" />
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script>
+			function loadData() {
+				var hour = new Date().getHours();
+				var now = "早上好";
+				if (hour < 6) now = "凌晨好";
+				else if (hour < 9) now = "早上好";
+				else if (hour < 12) now = "上午好";
+				else if (hour < 14) now = "中午好";
+				else if (hour < 17) now = "下午好";
+				else if (hour < 19) now = "傍晚好";
+				else if (hour < 24) now = "晚上好";
+				$("#time").text(now);
+				var user = window.sessionStorage.Name;
+				if (user != null) {
+					$("#user").text(user);
+					$.ajax({
+						url: "email.ashx",
+						type: "get",
+						data: { Id: 2, Index: 3, LoginId: user },
+						success: function (text) {
+							var count = text.split('/')[0];
+							$("#count").text(count);
+						}
+					});
+				}
+
+			}
+			loadData();
+			$("#mailbox").click(function () {
+				parent.window.liClick("", "li_mail", "");
+			});
+			$("#write").click(function () {
+				parent.window.liClick("", "li_write", "");
+			});
+			$("body").click(function () {
+				parent.window.$("body").click();
+			});
+		</script>
+	</div>
+	<div class="dbs">
+		<div id="foot">
+			<div id="f_blank"></div>
+			<div id="f_navigation">
+				<p>
+					<a>关于魅我</a> |
+						<a>服务条款</a> |
+						<a>用户服务协议</a> |
+						<a>隐私政策</a> |
+						<a>权利声明</a> |
+						<a>意见反馈</a> |
+						<a>客服中心</a> |
+						<a>网站导航</a>
+				</p>
+				<p>
+					Copyright © 2017 - 2018 MeiWo.
+						<a>All Rights Reserved.</a>
+				</p>
+				<p>
+					魅我公司 版权所有
+						<a>魅我网络文化经营许可证</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

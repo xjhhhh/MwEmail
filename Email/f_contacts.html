@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="css/f_contacts.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="dm">
+        <div class="divLeft">
+            <div class="head">通信录</div>
+            <div class="title">联系人</div>
+            <div class="group gc" id="d-all-c">
+                所有联系人 (<a id="all-c">0</a>)
+            </div>
+            <div class="group" data-id="1">
+                未分组联系人 (<a id="1">0</a>)
+            </div>
+            <div class="hr"></div>
+            <div class="title">联系组<a class="new-g" id="a-man-g">管理组</a><a class="new-g" id="add-g">添加组</a></div>
+            <div style="position: relative;">
+                <div class="auto-group" id="cover" style="display: none;"></div>
+                <div class="auto-group" id="d-group">
+                    <!--自动加载-->
+                </div>
+                <div id="adg-txt" style="display: none;">
+                    <div class="d-txt-adg">
+                        <input type='text' id='txtGroup' style='width: 100%;'>
+                    </div>
+                </div>
+            </div>
+            <div id="adg-btn" style="display: none;">
+                <div class="g-add-btns">
+                    <a class="adg-no" id="adg-cancel">取消</a>
+                    <a class="adg-ok" id="adg-save">保存</a>
+                </div>
+            </div>
+        </div>
+        <div class="divRight">
+            <iframe id="frame" src="f_friend.html"></iframe>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/f_contacts.js"></script>
+</body>
+</html>

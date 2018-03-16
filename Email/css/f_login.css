@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/bj.jpg);
+    size: 100%;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently not supported by any browser */
+    min-width:1024px;
+}
+
+.dcs {
+    width: 100%;
+    height: 655px;
+    position: relative;
+}
+
+.dls {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 150px;
+    right: 150px;
+    background-color: white;
+}
+
+.dbs {
+    width: 100%;
+    height: 170px;
+    position: relative;
+    background: #2C323B;
+    margin: -8px 0 0 0;
+}
+
+#foot {
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+}
+
+#f_blank {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+}
+
+#f_navigation p {
+    color: gray;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+    #f_navigation p a {
+        cursor: pointer;
+    }
+
+        #f_navigation p a:hover {
+            text-decoration: underline;
+        }
+
+.d_l_text {
+    position: relative;
+    width: 100%;
+    /*border: 1px solid black;*/
+    box-sizing: border-box;
+}
+
+.textL {
+    width: 300px;
+    height: 34px;
+    margin: 0 auto;
+    padding: 0 5px;
+    border: 1px solid #E6E6FA;
+    border-radius: 2px;
+}
+
+.textLc {
+    width: 220px;
+    height: 34px;
+    margin-left: 19px;
+    padding: 0 5px;
+    border: 1px solid #E6E6FA;
+    float: left;
+}
+
+.textL:hover {
+    border: 1px solid #00C1DE;
+}
+
+.textL:focus {
+    border: 1px solid #00C1DE;
+    box-shadow: 0 0 0 #00C1DE;
+}
+
+.btnL {
+    width: 312px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    background: #00C1DE;
+    border-color: #00C1DE;
+    box-sizing: border-box;
+    border: 0;
+    box-shadow: 0 1px 1px #ebe7e6;
+    cursor: pointer;
+}
+
+    .btnL:hover {
+        background: rgb(0, 183, 211);
+    }
+
+.al {
+    color: black;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 12px;
+    text-decoration: none;
+}
+
+    .al:hover {
+        color: #00C1DE;
+    }
+
+#Front-header {
+    width: 100%;
+    background-color: white;
+    height: 80px;
+}
+
+.chks {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 1px;
+    width: 14px;
+    height: 14px;
+}
+
+.lbls {
+    font-size: 14px;
+}
+
+.pTitle {
+    font-size: 18px;
+    padding: 20px;
+    line-height: 18px;
+}
+
+.ps {
+    text-align: center;
+    padding: 10px 0;
+}
+
+#myCon {
+    background: pink;
+    border: 0px solid red;
+    margin-left: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}

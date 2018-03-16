@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            user-select: none;
+        }
+
+        .logo {
+            height: 45px;
+            background: linear-gradient(#196fc6,#135aa4);
+            border-bottom: 1px solid #06478a;
+        }
+
+            .logo img {
+                width: 120px;
+                padding-left: 5px;
+                padding-top: 3px;
+            }
+
+        .tlogin {
+            position: relative;
+            width: 160px;
+            float: right;
+        }
+
+        .al {
+            float: right;
+            margin-right: 45px;
+            color: #fff;
+            line-height: 45px;
+        }
+
+        .ico_l {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 30px;
+            height: 30px;
+            display: block;
+            background: url(../img/pl.png);
+        }
+
+        .l_list {
+            background-color: #fff;
+            position: absolute;
+            top: 46px;
+            left: 75px;
+            width: 280px;
+            overflow: auto;
+            opacity: 1;
+            visibility: visible;
+            border-radius: 3px;
+            box-shadow: 0 0 9px RGBA(0,0,0,.75);
+            padding: 4px 0;
+            text-align: left;
+            white-space: nowrap;
+            z-index: 99;
+            border: 1px solid RGBA(0,0,0,.1);
+            display: none;
+        }
+
+        .h_list {
+            background-color: #fff;
+            position: absolute;
+            top: 46px;
+            left: 10px;
+            width: 210px;
+            overflow: auto;
+            opacity: 1;
+            visibility: visible;
+            border-radius: 3px;
+            box-shadow: 0 0 9px RGBA(0,0,0,.75);
+            padding: 4px 0;
+            text-align: left;
+            white-space: nowrap;
+            z-index: 99;
+            border: 1px solid RGBA(0,0,0,.1);
+            display: none;
+        }
+
+        .d_h_l {
+            line-height: 45px;
+            padding: 0 50px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+            font-family: Arial;
+            position: relative;
+        }
+
+        .d_l_l {
+            line-height: 45px;
+            padding: 0 40px;
+        }
+
+        .de {
+            border-top: 1px solid RGBA(0,0,0,.1);
+            color: #115ba6;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        .head {
+            height: 45px;
+            background-color: #e5e5e5;
+            position: relative;
+            border-bottom: 1px solid #bbc1c7;
+        }
+
+        .hlt {
+            width: 110px;
+            line-height: 45px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        #sico {
+            width: 23px;
+            height: 23px;
+            display: inline-block;
+            background-image: url(../img/m_mail.png);
+            position: absolute;
+            top: 12px;
+        }
+
+        #st {
+            margin-left: 25px;
+            color: #115ba6;
+        }
+
+        .stre {
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            background-image: url(../img/stre.png);
+            position: relative;
+            top: 3px;
+        }
+
+        .sgou {
+            width: 14px;
+            height: 14px;
+            display: none;
+            background-image: url(../img/m_gou.png);
+            position: absolute;
+            top: 14px;
+            left: 5px;
+        }
+
+        .sico {
+            width: 23px;
+            height: 23px;
+            display: inline-block;
+            background-image: url(../img/m_mail.png);
+            position: absolute;
+            top: 11px;
+            left: 22px;
+        }
+
+        .str {
+            color: #000;
+            font-weight: bold;
+        }
+
+        .hlt:active {
+            background-color: #cccccc;
+        }
+
+        .main {
+        }
+
+        .dm {
+            height: 60px;
+            border-bottom: 1px solid #bbc1c7;
+            position: relative;
+        }
+
+        .dt {
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .db {
+            height: 30px;
+        }
+
+        .chks {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 2px;
+            left: 2px;
+        }
+
+        /*.s_title {
+            margin-left: 15px;
+            display: inline-block;
+            position: relative;
+            top: -2px;
+            vertical-align: top;
+            font-size: 17px;
+            overflow: hidden;
+            white-space: nowrap;
+
+            text-overflow: ellipsis;
+        }*/
+        .s_title {
+            vertical-align: top;
+            font-size: 17px;
+            position: absolute;
+            left: 42px;
+            top: 0px;
+            right: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .s_send {
+            vertical-align: top;
+            font-size: 14px;
+            position: absolute;
+            left: 42px;
+            top: 30px;
+            width: 160px;
+        }
+
+        .s_time {
+            vertical-align: top;
+            font-size: 14px;
+            position: absolute;
+            top: 30px;
+            right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="logo">
+            <img src="../img/logo_j_w.png" />
+            <div class="tlogin">
+                <a class="al" id="al">user@ussssser.com</a>
+                <span class="ico_l" id="ico_l"></span>
+            </div>
+            <div class="l_list">
+                <div class="d_l_l">user@user.com</div>
+                <div class="d_l_l de">反馈</div>
+                <div class="d_l_l de">帮助</div>
+                <div class="d_l_l de" id="dExit">退出</div>
+            </div>
+        </div>
+        <div class="head">
+            <div class="hlt"><span id="sico"></span><span id="st">收件箱</span><span class="stre"></span></div>
+            <div class="h_list">
+                <div class="d_h_l"><span class="sgou" style="display: block;"></span><span class="sico" style="background: url(../img/m_mail.png);"></span><span class="str">未读邮件</span></div>
+                <div class="d_h_l de"><span class="sgou"></span><span class="sico" style="background: url(../img/m_rec.png);"></span><span class="str">收件箱</span></div>
+                <div class="d_h_l de"><span class="sgou"></span><span class="sico" style="background: url(../img/m_draft.png);"></span><span class="str">草稿箱</span></div>
+                <div class="d_h_l de"><span class="sgou"></span><span class="sico" style="background: url(../img/m_send.png);"></span><span class="str">已发送</span></div>
+                <div class="d_h_l de"><span class="sgou"></span><span class="sico" style="background: url(../img/m_del.png);"></span><span class="str">已删除</span></div>
+                <div class="d_h_l de"><span class="sgou"></span><span class="sico" style="background: url(../img/m_gar.png);"></span><span class="str">垃圾邮件</span></div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="dm">
+                <div class="dt">
+                    <input type="checkbox" class="chks" />
+                    <span class="s_title">测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试</span>
+                </div>
+                <div class="db">
+                    <span class="s_send">测试测试</span>
+                    <span class="s_time">16：10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script>
+        $("#ico_l").click(function (e) {
+            e.stopPropagation();
+            $(".h_list").css("display", "none");
+            $(".l_list").toggle();
+        });
+        $("body").click(function () {
+            $(".l_list").css("display", "none");
+            $(".h_list").css("display", "none");
+        });
+        $(".d_l_l").click(function (e) {
+            e.stopPropagation();
+            var str = $(this).text();
+            switch (str) {
+                case "反馈":
+                    break;
+                case "帮助":
+                    break;
+                case "退出":
+                    $(location).attr("href", "m_login.html");
+                    break;
+            }
+        });
+        $(".d_h_l").click(function (e) {
+            e.stopPropagation();
+            var $this = $(this);
+            var str = $this.children(".str").text();
+            $(".sgou").css("display", "none");
+            $this.children(".sgou").css("display", "block");
+            $("#sico").css("background", $(this).children(".sico").css("background"));
+            $("#st").text(str);
+            switch (str) {
+                case "未读邮件":
+
+                    break;
+                case "收件箱":
+
+                    break;
+                case "草稿箱":
+
+                    break;
+                case "已发送":
+
+                    break;
+                case "已删除":
+
+                    break;
+                case "垃圾邮件":
+
+                    break;
+
+            }
+            $(".h_list").css("display", "none");
+        });
+        $(".hlt").click(function (e) {
+            e.stopPropagation();
+            $(".l_list").css("display", "none");
+            $(".h_list").toggle();
+        });
+        function loadData() {
+            $("#al").text(window.sessionStorage.Name);
+        }
+        loadData();
+    </script>
+</body>
+</html>

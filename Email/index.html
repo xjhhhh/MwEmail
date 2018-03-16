@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>魅我邮箱</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="boss">
+        <div id="divContent" class="content">
+            <div class="head">
+                <div class="h_logo">
+                    <img src="img/logo_j.png" style="width: 200px; height: 65px;" />
+                </div>
+                <div class="h_ul">
+                    <ul class="u_navigation" id="ul_navigation">
+                        <li class="ls" id="li_index">首页</li>
+                        <li class="ls" id="li_contacts">通信录</li>
+                        <li class="ls" id="li_mail">收件箱</li>
+                        <li class="ls" id="li_write">写信</li>
+                        <li class="ls" id="li_draft">草稿箱</li>
+                        <li class="ls" id="li_garbage">垃圾箱</li>
+                    </ul>
+                </div>
+                <div class="h_login">
+                    <a class="aLogin" id="aLogin">
+                        <div class="set">
+                            <ul class="su">
+                                <li class="sl">设置</li>
+                                <li style="height: 1px; margin: 4px 0; border-bottom: 1px solid #e9e9e9; cursor: default;"></li>
+                                <li class="sl" id="lUpdatePwd">修改密码</li>
+                                <li class="sl" id="lExit">退出</li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="divFrame">
+                <iframe id="frame" src="f_index.html"></iframe>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function GetUser() {
+            //获取用户名
+            var loginId = window.sessionStorage.Name;
+            var user = $("#aLogin");
+            if (loginId != null) {
+                user.prepend(loginId);
+                user.click(function (e) {
+                    e.stopPropagation();
+                    $(".set").toggle();
+                });
+            }
+            else {
+                user.prepend("登录");
+                user.click(function () {
+                    $(location).attr("href", "login.html");
+                });
+            }
+        }
+        GetUser();
+
+        $("body").click(function () {
+            $(".set").css("display", "none");
+        });
+
+        $(".ls").click(function () {
+            liClick(this, "", "");
+        });
+
+        function liClick(obj, id, str) {
+            if (typeof (obj) === 'object') {
+                id = $(obj).attr("id");
+                if ($(obj).hasClass("liClick"))
+                    return;
+                else {
+                    $(".ls[class~=liClick]").removeClass("liClick");
+                    $(obj).addClass("liClick");
+                }
+            }
+            else {
+                if ($("#" + id).hasClass("liClick"))
+                    return;
+                else {
+                    $(".ls[class~=liClick]").removeClass("liClick");
+                    $("#" + id).addClass("liClick");
+                }
+            }
+            var frame = $("#frame");
+            switch (id) {
+                case "li_index":
+                    frame.attr("src", "f_index.html");
+                    break;
+                case "li_contacts":
+                    frame.attr("src", "f_contacts.html");
+                    break;
+                case "li_mail":
+                    frame.attr("src", "f_mail.html");
+                    break;
+                case "li_write":
+                    if (str != "")
+                        frame.attr("src", "f_write.html?" + str);
+                    else
+                        frame.attr("src", "f_write.html");
+                    break;
+                case "li_draft":
+                    frame.attr("src", "f_draft.html");
+                    break;
+                case "li_garbage":
+                    frame.attr("src", "f_garbage.html");
+                    break;
+            }
+        }
+        $("#lExit").click(function () {
+            window.sessionStorage.Name = "";
+            window.sessionStorage.Id = "";
+            $(location).attr("href", "login.html");
+        });
+    </script>
+</body>
+</html>

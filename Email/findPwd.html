@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>找回密码</title>
+    <link href="css/f_findPwd.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="head">
+        <h3>魅我邮箱</h3>
+        <h3 style="padding-left: 50px;">快速找回密码</h3>
+
+    </div>
+    <div class="content">
+        <div class="main">
+            <div class="title">
+                <p id="pTitle">输入邮箱帐号</p>
+            </div>
+            <!--第一步-->
+            <div id="firstMain">
+                <div class="divBox">
+                    <div class="divP">
+                        <p style="height: 10vh; display: table-cell; vertical-align: bottom; font-size: 14px;">请输入要重置密码的邮箱帐号</p>
+                    </div>
+                    <div class="divP">
+                        <p style="height: 12vh; display: table-cell; vertical-align: middle;">
+                            <input type="text" id="txtEmail" placeholder="请输入邮箱帐号">
+                            <label id="lblCemail" class="ls">&nbsp;*该账号不存在！</label>
+                        </p>
+                    </div>
+                    <div class="divP">
+                        <p style="height: 10vh; display: table-cell; vertical-align: top;">
+                            <input type="text" id="txtCode" placeholder="请输入验证码">
+                            <canvas id="myCon" data-code="" width="105" height="32"></canvas>
+                            <label id="lblCcode" class="ls">&nbsp;*验证码错误！</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="divBox2">
+                    <div class="divP2">
+                        <p class="pm">
+                            <input type="button" value="下一步" class="next" id="btnNext" style="margin-left: 40px" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--第二步-->
+            <div id="secodeMain">
+                <div class="divBox">
+                    <div style="width: 100%; display: table; text-align: left; padding-left: 160px">
+                        <p style="height: 10vh; display: table-cell; vertical-align: bottom; font-size: 14px;">
+                            我们已将验证码发送至您的手机，请注意查收
+                        </p>
+                    </div>
+                    <div style="width: 100%; display: table; text-align: left; padding-left: 160px">
+                        <p style="height: 12vh; display: table-cell; vertical-align: middle;">
+                            <input type="text" id="txtPcode" placeholder="请输入手机验证码" data-code="" style="width: 50%; height: 28px; padding-left: 5px;">
+                            <label id="lblPcode" class="ls">&nbsp;*请输入您收到的四位手机验证码！</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="divBox2">
+                    <div class="divP2">
+                        <p class="pm">
+                            <input type="button" value="上一步" class="next" id="btnPrev" style="margin-left: -10px;" />
+                            <input type="button" value="下一步" class="next" id="btnNext2" style="margin-left: 10px; margin-right: 95px;" /><!-- style="margin-left:100px"-->
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--第三步-->
+            <div id="thirdMain">
+                <div class="divBox">
+                    <div style="width: 100%; height: 5vh;">
+                    </div>
+                    <div style="width: 100%; display: table; text-align: left; padding-left: 160px;">
+                        <p style="height: 12vh; display: table-cell; vertical-align: middle;">
+                            <label style="font-size: 14px; display: block">&nbsp;输入新密码</label>
+                            <input type="password" id="txtPwd" style="width: 50%; height: 28px; padding-left: 5px;">
+                            <label class="lbls2" id="lblPwd">6~16个字符，区分大小写</label>
+                        </p>
+                    </div>
+                    <div style="width: 100%; display: table; text-align: left; padding-left: 160px;">
+                        <p style="height: 10vh; display: table-cell; vertical-align: top;">
+                            <label style="font-size: 14px; display: block">&nbsp;确认密码</label>
+                            <input type="password" id="txtPwd2" style="width: 50%; height: 28px; padding-left: 5px;">
+                            <label class="lbls2" id="lblPwd2">请再次填写密码</label>
+                        </p>
+                    </div>
+                </div>
+                <div class="divBox2">
+                    <div class="divP2">
+                        <p class="pm">
+                            <input type="button" value="上一步" class="next" id="btnPrev2" style="margin-left: -10px;" />
+                            <input type="button" value="确认" class="next" id="btnOK" style="margin-left: 10px; margin-right: 95px;" />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom" >
+        <p class="ps">魅我公司 版权所有 </p>
+        <p class="ps" style="padding-left: 20px;">Copyright © 2017 - 2018 MeiWo.<a>All Rights Reserved.</a></p>
+        <p class="ps" style="padding-left: 40px;"><a>魅我首页</a> | <a>魅我音乐</a> | <a>意见反馈</a> | <a>不良信息举报</a></p>
+    </div>
+</body>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/f_findPwd.js"></script>
+</html>
